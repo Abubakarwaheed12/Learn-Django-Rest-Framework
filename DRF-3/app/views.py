@@ -8,6 +8,7 @@ from app.serializers import StudentsSerializer
 from rest_framework.renderers import JSONRenderer
 
 # De serialization 
+# data back convert to the complex data type 
 
 def home(request):
     st=Students.objects.get(id=1)
