@@ -13,6 +13,7 @@ from django.views.decorators.csrf import csrf_exempt
 # De serialization 
 # data back convert to the complex data type 
 # by using bytes io 
+# Validation
 
 
 @csrf_exempt
