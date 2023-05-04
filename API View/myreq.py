@@ -36,7 +36,7 @@ def post_data():
         'grade':'4+',
     }
     
-    headers={'content_type':'application/json'}
+    headers={'content-type':'application/json'}
     json_data=json.dumps(data)
     
     r=requests.post(url = URL , headers = headers, data = json_data)
@@ -45,7 +45,7 @@ def post_data():
     
     print(res_data)
 
-# post_data()
+post_data()
 
 
 # Update Data 
@@ -88,4 +88,4 @@ def delete_data(id):
     
     print(res_data)
 
-delete_data(4)
+# delete_data(4)
