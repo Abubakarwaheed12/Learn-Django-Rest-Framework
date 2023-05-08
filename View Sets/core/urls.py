@@ -6,6 +6,8 @@ from rest_framework import DefaultRouter
 
 router = DefaultRouter() 
 
+router.regidter('')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
