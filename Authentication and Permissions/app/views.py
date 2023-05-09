@@ -17,6 +17,6 @@ class StudentApi(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     
     authentication_classes=[BasicAuthentication]
-    permission_classes=[IsAuthenticated]
+    permission_classes=[IsAuthenticated] 
 
 
