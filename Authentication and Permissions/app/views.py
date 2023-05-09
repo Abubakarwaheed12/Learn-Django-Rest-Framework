@@ -8,9 +8,9 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from rest_framework.authentication import BasicAuthentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated , AllowAny , IsAdminUser
 
-# Permission Classes
+# Basic Authentication , Session Authentication 
 
 class StudentApi(viewsets.ModelViewSet):
     queryset=Students.objects.all()
