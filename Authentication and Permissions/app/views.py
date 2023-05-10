@@ -10,6 +10,7 @@ from django.utils.decorators import method_decorator
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.permissions import IsAuthenticated , AllowAny , IsAdminUser
 
+
 # Basic Authentication , Session Authentication 
 
 class StudentApi(viewsets.ModelViewSet):
