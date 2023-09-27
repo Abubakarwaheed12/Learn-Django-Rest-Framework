@@ -7,9 +7,9 @@ from rest_framework import status
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from rest_framework.authentication import BasicAuthentication
+from rest_framework.authentication import BasicAuthentication, SessionAuthentication 
 from rest_framework.permissions import IsAuthenticated , AllowAny , IsAdminUser
-
+from .custompermissions import MyPermission
 
 # Basic Authentication , Session Authentication 
 
@@ -18,6 +18,6 @@ class StudentApi(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     
     authentication_classes=[BasicAuthentication]
-    permission_classes=[IsAuthenticated] 
+    permission_classes=[MyPermission] 
 
 
