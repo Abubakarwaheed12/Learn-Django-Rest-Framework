@@ -17,8 +17,8 @@ class StudentApi(viewsets.ModelViewSet):
 
     # Throttling 
     # throttle_classes = [UserRateThrottle]
-    throttle_classes = [ScopedRateThrottle]
-    throttle_scope = 'viewstu'
+    # throttle_classes = [ScopedRateThrottle]
+    # throttle_scope = 'viewstu'
 
     # Search 
     filter_backends = [SearchFilter]
@@ -29,9 +29,9 @@ class StudentApi(viewsets.ModelViewSet):
     search_fields = ['^name']
 
 
-    def get_queryset(self):
-        queryset = super().get_queryset() 
-        parameter_value = self.request.query_params.get('parameter_name')
-        if parameter_value:
-            queryset = queryset.filter(your_field=parameter_value)
-        self.queryset = Students.objects.filter()
+    # def get_queryset(self):
+    #     queryset = super().get_queryset() 
+    #     parameter_value = self.request.query_params.get('parameter_name')
+    #     if parameter_value:
+    #         queryset = queryset.filter(your_field=parameter_value)
+    #     self.queryset = Students.objects.filter()
